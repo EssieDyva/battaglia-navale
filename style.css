@@ -1,0 +1,48 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(176, 176, 176);
+}
+
+
+p {
+    text-align: center;
+ }
+table,
+th {
+    border: 1px solid black;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 30px;
+}
+
+td,th {
+    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+}
+
+#buttonPlayer1, #buttonStart, #cambioGiocatore, #restart{
+    display: block;
+    margin:auto;
+    background-color: rgb(254, 33, 33);
+    height: 100px;
+    width: 120px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+#buttonPlayer1:hover, #buttonStart:hover, #cambioGiocatore:hover, #restart:hover{
+    cursor: pointer;
+    background-color: rgb(255, 89, 0);
+}

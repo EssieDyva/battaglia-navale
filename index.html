@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Battleship</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <div id="setup">
+    <div id="setupTitle">
+      <p>FASE DI SETUP (o FASE 2)</p>
+      <p>SETUP PLAYER <span id="currentPlayerID"></span></p>
+    </div>
+    <div id="partitaTitle">
+      <p>FASE DI GIOCO (o FASE 3)</p>
+      <p>TURNO DI <span id="playcurrentPlayerID"></span></p>
+    </div>
+    <div id="setupPlayer">
+      <table>
+        <th></th>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+        <th>D</th>
+        <tr>
+          <th>1</th>
+          <td id="00" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="01" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="02" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="03" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td id="10" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="11" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="12" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="13" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td id="20" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="21" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="22" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="23" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td id="30" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="31" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="32" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+          <td id="33" onclick="setup(this)">&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+    <button id="buttonPlayer1" onclick="passaASetupGiocatore2()">PASSA A SETUP PLAYER 2</button>
+    <button id="buttonStart" onclick="inizioGioco()">INIZIA PARTITA</button>
+    <button id="cambioGiocatore" onclick="cambiaGiocatore()" style="display: none;">PASSA ALL'ALTRO GIOCATORE</button>
+    <button id="restart" onclick="restart()" style="display: none;">NUOVA PARTITA</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+
+</html>
