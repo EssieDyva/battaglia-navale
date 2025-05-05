@@ -138,6 +138,7 @@ function inizioGioco() {
   // Nascondo i bottoni e i titoli del setup
   document.getElementById("buttonStart").style.display = "none";
   document.getElementById("setupTitle").style.display = "none";
+  // Mostro il titolo della partita
   document.getElementById("partitaTitle").style.display = "block";
 
   // Visualizzo quale giocatore sta giocando
@@ -201,8 +202,6 @@ function cambiaGiocatore() {
   // Seleziono tutte le celle della griglia
   const celle = document.querySelectorAll("td");
   celle.forEach(cella => {
-    // Resetto il colore di tutte le celle a bianco
-    cella.style.backgroundColor = 'white';
 
     // Ottengo le coordinate della cella dalla sua ID
     const row = cella.id[0]; // Riga
@@ -214,6 +213,9 @@ function cambiaGiocatore() {
       // Se il giocatore attivo ha mancato in questa cella
       else if (currentPlayer.colpiNavi[row][col] === 'acqua') {
         cella.style.backgroundColor = 'lightblue';
+      }
+      else {
+        cella.style.backgroundColor = 'white'; // Resetto il colore della cella
       }
   });
 
