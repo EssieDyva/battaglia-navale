@@ -158,12 +158,10 @@ function spara(element) {
   // Ottengo le coordinate della cella cliccata dalla sua ID
   const row = element.id[0]; // Riga della cella
   const col = element.id[1]; // Colonna della cella
+  const opponent = players[1 - players.indexOf(currentPlayer)]; // Avversario del giocatore attivo
 
   // Controllo se il colpo è valido (la cella non è già stata colpita)
   if (currentPlayer.colpiNavi[row][col] === '') {
-    // Ottengo l'avversario del giocatore attivo
-    const opponent = players[1 - players.indexOf(currentPlayer)];
-
     // Controllo se la cella contiene una nave dell'avversario
     if (opponent.posizioniNavi[row][col] === true) {
       // Colpo a segno: aggiorno lo stato della cella e incremento il contatore delle navi colpite
@@ -182,7 +180,6 @@ function spara(element) {
   }
 
   // Controllo se il giocatore attivo ha vinto (ha affondato tutte le navi dell'avversario)
-  const opponent = players[1 - players.indexOf(currentPlayer)];
   if (opponent.navicolpite === numNavi) {
     // Il giocatore attivo ha vinto: mostro un messaggio e abilito il pulsante di riavvio
     alert(`HA VINTO IL ${currentPlayer.id.toUpperCase()}`);
